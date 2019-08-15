@@ -40,6 +40,9 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
+
+import be.xeco.testpaypalintegration.GetPayPalOrder;
 /**
  *
  * @author espoir_mur
@@ -87,7 +90,9 @@ public class PaymentServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        RequestDispatcher view = request.getRequestDispatcher("/paypal.html");
+        view.forward(request, response);    
+    
     }
 
     /**
@@ -102,6 +107,7 @@ public class PaymentServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         createPayment(req, resp);
+        
     }
 
     /**

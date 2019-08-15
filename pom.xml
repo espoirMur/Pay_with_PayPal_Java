@@ -13,7 +13,7 @@
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>javax</groupId>
@@ -32,6 +32,31 @@
                    <groupId>org.apache.logging.log4j</groupId>
                </exclusion>
            </exclusions>
+       </dependency>
+        <dependency>
+           <groupId>com.paypal.sdk</groupId>
+           <artifactId>checkout-sdk</artifactId>
+           <version>1.O.O</version>
+           <scope>system</scope>
+           <systemPath>${project.basedir}/paypal-checkout/checkout-sdk-1.0.0-RC2.jar</systemPath>
+       </dependency>
+       
+       <dependency>
+           <groupId>com.paypal.sdk</groupId>
+           <artifactId>brain-tree</artifactId>
+           <version>1.O.O</version>
+           <scope>system</scope>
+           <systemPath>${project.basedir}/paypal-checkout/braintreehttp-1.3.1.jar</systemPath>
+       </dependency>
+       <dependency>
+           <groupId>org.json</groupId>
+           <artifactId>json</artifactId>
+           <version>20180813</version>
+       </dependency>
+       <dependency>
+           <groupId>org.apache.commons</groupId>
+           <artifactId>commons-lang3</artifactId>
+           <version>3.6</version>
        </dependency>
     </dependencies>
 
